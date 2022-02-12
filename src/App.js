@@ -10,7 +10,7 @@ import loginService from "./services/login";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
   const [username, setUsername] = useState("");
@@ -115,8 +115,8 @@ const App = () => {
       )}
 
       <div>
-        <button onClick={() => setShowAll(!showAll)}>
-          show {showAll ? "important" : "all"}
+        <button id="show" onClick={() => setShowAll(!showAll)}>
+          show {showAll ? "all" : "important"}
         </button>
       </div>
       <ul>
